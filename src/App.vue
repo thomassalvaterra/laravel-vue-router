@@ -1,16 +1,16 @@
 <script>
-import AppEvent from "./components/AppEvent.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
+import TheHeader from "./components/TheHeader.vue"
 
 export default {
 	components: {
-		AppEvent
+		TheHeader
 	},
 	data() {
 		return {
-			store
+			store,
 		}
 	},
 	mounted() {
@@ -41,9 +41,9 @@ export default {
 </script>
 
 <template>
-	<main>
-		<AppEvent />
-	</main>
+	<TheHeader />
+
+	<router-view></router-view>
 </template>
 
 <style lang="scss">
@@ -56,7 +56,8 @@ export default {
 // @use './styles/partials/variables' as *;
 
 // ...qui eventuale SCSS di App.vue
-main {
-	padding: 1rem;
+
+header {
+	background-color: orangered;
 }
 </style>
