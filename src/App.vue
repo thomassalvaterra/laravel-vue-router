@@ -15,9 +15,6 @@ export default {
 	},
 	mounted() {
 		this.getEventList();
-
-
-
 	},
 	methods: {
 		getEventList() {
